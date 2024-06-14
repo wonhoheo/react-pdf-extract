@@ -1,0 +1,25 @@
+{
+  "name": "pdf-to-image-extract",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "next build",
+    "dev": "next dev",
+    "preview": "next preview"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@wojtekmaj/react-hooks": "^1.20.0",
+    "next": "^14.2.0",
+    "pdfjs-dist": "^4.3.136",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "tesseract.js": "^5.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.2",
+    "@types/react": "18.3.3",
+    "typescript": "5.4.5"
+  }
+}
