@@ -29,6 +29,22 @@ export async function convertToImage(pdf: PDFDocumentProxy) {
   return images;
 }
 
+export async function getText(pdf: PDFDocumentProxy) {
+  const texts = [];
+
+  for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+    const page = await pdf.getPage(pageNum);
+    const textContent = await page.getTextContent();
+
+    console.log(textContent);
+
+    // @ts-ignore
+    texts.push(textContent.items.map((item) => item.str).join(""));
+  }
+
+  return texts;
+}
+
 export function readFile(file: File) {
   return new Promise<string | ArrayBuffer | null>((resolve, reject) => {
     let reader = new FileReader();
